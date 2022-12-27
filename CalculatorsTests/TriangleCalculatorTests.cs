@@ -1,12 +1,7 @@
-﻿using AreaCalculator.Calculators;
+﻿using AreaCalculator;
+using AreaCalculator.Calculators;
 using AreaCalculator.Shapes;
-using AreaCalculator;
 using FluentAssertions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CalculatorsTests
 {
@@ -14,11 +9,11 @@ namespace CalculatorsTests
     {
         // Валидные тест кейсы использования калькулятора площади треугольника.
         // Прямоугольные треугольники
+        [TestCase(5.0, 6.0, 7.81025, 15.0)]
+        [TestCase(3.4, 7.6, 8.32586, 12.92)]
+        // Остальные треугольники
         [TestCase(5.0, 4.6, 2.5145, 5.7499)]
         [TestCase(7.6124, 2.7, 6.6847, 8.8999)]
-        // Остальные треугольники
-        [TestCase(5.0, 6.0, 7.8102, 15.0)]
-        [TestCase(3.4, 7.6, 8.3259, 12.92)]
         public void TriangleAreaValidValues(double a, double b, double c, double output)
         {
             //Arrange
