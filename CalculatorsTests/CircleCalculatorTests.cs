@@ -13,7 +13,7 @@ namespace CalculatorsTests
         public void CircleAreaValidValues(double input, double output)
         {
             //Arrange
-            Circle circle = new Circle(input);
+            var circle = new Circle(input);
             IAreaCalculator circleCalculator = CalculatorFactory.GetCircleCalculator(circle);
             //Act
             double result = circleCalculator.GetArea();
@@ -25,7 +25,7 @@ namespace CalculatorsTests
         public void CircleAreaArgumentZeroException()
         {
             //Arrange
-            Circle circle = new Circle(0.0);
+            var circle = new Circle(0.0);
             IAreaCalculator circleCalculator = CalculatorFactory.GetCircleCalculator(circle);
             //Act
 
@@ -40,7 +40,7 @@ namespace CalculatorsTests
         public void CircleAreaArgumentOutOfRangeException(double input, string exceptionMessage)
         {
             //Arrange
-            Circle circle = new Circle(input);
+            var circle = new Circle(input);
             IAreaCalculator circleCalculator = CalculatorFactory.GetCircleCalculator(circle);
             //Assert
             circleCalculator.Invoking(calc => calc.GetArea()).Should().Throw<ArgumentOutOfRangeException>(exceptionMessage);

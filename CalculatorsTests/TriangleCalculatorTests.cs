@@ -17,8 +17,8 @@ namespace CalculatorsTests
         public void TriangleAreaValidValues(double a, double b, double c, double output)
         {
             //Arrange
-            Triangle circle = new Triangle(a, b, c);
-            IAreaCalculator triangleCalculator = CalculatorFactory.GetTriangleCalculator(circle);
+            var triangle = new Triangle(a, b, c);
+            IAreaCalculator triangleCalculator = CalculatorFactory.GetTriangleCalculator(triangle);
             //Act
             double result = triangleCalculator.GetArea();
             //Assert
@@ -29,7 +29,7 @@ namespace CalculatorsTests
         public void TriangleAreaArgumentZeroException()
         {
             //Arrange
-            Triangle triangle = new Triangle(0.0, 0.0, 0.0);
+            var triangle = new Triangle(0.0, 0.0, 0.0);
             IAreaCalculator triangleCalculator = CalculatorFactory.GetTriangleCalculator(triangle);
             //Assert
             triangleCalculator.Invoking(calc => calc.GetArea()).Should().Throw<ArgumentException>("Incorect shape size");
@@ -43,7 +43,7 @@ namespace CalculatorsTests
         public void TriangleAreaArgumentOutOfRangeException(double a, double b, double c, string exceptionMessage)
         {
             //Arrange
-            Triangle triangle = new Triangle(a, b, c);
+            var triangle = new Triangle(a, b, c);
             IAreaCalculator triangleCalculator = CalculatorFactory.GetTriangleCalculator(triangle);
             //Assert
             triangleCalculator.Invoking(calc => calc.GetArea()).Should().Throw<ArgumentOutOfRangeException>(exceptionMessage);
