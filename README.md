@@ -3,16 +3,17 @@
 
 Создание библиотеки для расчёта площади фигур ниже представленна UML схема библиотеки
 
-![[Pasted image 20221227233830.png]]
+![2022-12-27_23-38-19](https://user-images.githubusercontent.com/86874761/209723617-bb06eeff-101d-4649-9e75-c03a96a1248d.png)
+-------------
 
 ## Задание 2
 
 Написать SQL запрос к двум таблицам связанным 1 ко многим, с гарантией вывода всех названий продуктов
 ### Структура БД
-![[Pasted image 20221228000355.png]]
+![2022-12-28_00-03-49](https://user-images.githubusercontent.com/86874761/209723635-b689f87b-617b-4ce0-bdd6-9545e3c56b47.png)
 
 ### SQL запрос
-![[Pasted image 20221228001744.png]]
+![2022-12-28_00-17-40](https://user-images.githubusercontent.com/86874761/209723644-7ebe41a1-6191-4f88-859a-c9e5bb627d36.png)
 
 ### Результат выполнения
-![[Pasted image 20221228001649.png]]
+![2022-12-28_00-16-47](https://user-images.githubusercontent.com/86874761/209723646-855c0ab9-0fcc-48b5-8ff0-f2da0ca94c2c.png)
