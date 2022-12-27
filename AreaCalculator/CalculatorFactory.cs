@@ -14,6 +14,13 @@ namespace AreaCalculator
     /// </summary>
     public static class CalculatorFactory
     {
+        /// <summary>
+        /// Get area calculator for circle.
+        /// </summary>
         public static IAreaCalculator GetCircleCalculator(Circle circle) => new CircleCalculator(circle);
+        /// <summary>
+        /// Get area calculator for trioangle.
+        /// </summary>
+        public static IAreaCalculator GetTriangleCalculator(Triangle triangle) => new TriangleCalculator(triangle);
     }
 }
