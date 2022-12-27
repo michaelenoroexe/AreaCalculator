@@ -1,4 +1,4 @@
-﻿namespace AreaCalculator.Calculators
+﻿namespace AreaCalculator
 {
     public interface IAreaCalculator
     {

@@ -1,5 +1,4 @@
 using AreaCalculator;
-using AreaCalculator.Calculators;
 using AreaCalculator.Shapes;
 using FluentAssertions;
 
